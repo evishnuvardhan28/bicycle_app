@@ -1,0 +1,28 @@
+<div class="container mt-3">
+  <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{successMsg}}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+    <table class="table table-bodered">
+        <thead>
+          <tr>
+            <th scope="col">name</th>
+            <th scope="col">Cost Charge/Day</th>
+            <th scope="col">category</th>
+            <th scope="col">Full Description</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usr of readUser">
+            <th scope="row">{{usr.name}}</th>
+            <td>{{usr.cost}}</td>
+            <td>{{usr.category}}</td>
+            <td>{{usr.description}}</td>
+            <td><button class="btn btn-danger" (click)="deleteName(usr.name)">Delete</button></td>
+            <td><a [routerLink]="['/new',usr.name]" class="btn btn-success">Update</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Update the Bicycle</h1>
+                </div>
+                <form>
+                    <div class="mb-3">
+                      <label  class="form-label">select existing Bicycle </label>
+                      <input type="dropdown" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="updatedata.select" name="  ">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Enter Bicycle Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="updatedata.name" name="  ">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Cost Charge/Day</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="updatedata.cost" name="   ">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+                      <div class="mb-3">
+                        <label  class="form-label">category</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="updatedata.category" name="   ">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+           
+                   
+                    <button type="submit" type="submit"(click)="Dataupdate()" class="btn btn-secondary">submit</button><br><br>
+                                                                             
+                    <button type="clear" class="btn btn-secondary">clear</button>
+                  </form>
+                  <a routerLink="/homepage">homepage</a>
+            </div>
+        </div>
+    </div>
+</div>

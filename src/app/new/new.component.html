@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Bicycle details</h1><hr>
+                    <h2>Add Bicycle</h2>
+                </div>
+                <div *ngIf="errMsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>{{errMsg}}</strong> 
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{successMsg}}</strong> 
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <form [formGroup]="bicycleForm" >
+                    <div class="mb-3">
+                      <label  class="form-label">Enter Bicycle Name</label>
+                      <input type="text" class="form-control" formControlName="name"id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="newadmin.name" name="xyz">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Cost Charge/Day</label>
+                        <input type="number" class="form-control" formControlName="cost" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="newadmin.cost" name="10">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+                      <div class="mb-3">
+                        <label  class="form-label">category</label>
+                        <input type="text" class="form-control" formControlName="category" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="newadmin.category" name="---">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+                      <div class="mb-3">
+                        <label  class="form-label">Full Description</label>
+                        <input type="textarea" class="form-control" formControlName="description" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="newadmin.description" name="  ">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+                   <div *ngIf="!getparamid">
+                    <button type="submit" type="submit"(click)=" bicycleSubmit()" class="btn btn-secondary">submit</button><br><br>
+                   </div>
+                    <div *ngIf="getparamid">
+                      <button type="submit" (click)="updateBicycle()" class="btn btn-secondary">Update</button><br><br>
+                    </div>                                                        
+                    <button type="clear" class="btn btn-secondary">clear</button>
+                  </form>
+                  <a routerLink="/homepage" *ngIf="!getparamid">homepage</a>
+            </div>
+        </div>
+    </div>
+</div>
