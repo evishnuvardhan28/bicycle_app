@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Adminlogin } from '../Adminlogin';
+
 
 
 @Component({
@@ -9,13 +9,13 @@ import { Adminlogin } from '../Adminlogin';
 })
 export class LoginComponent implements OnInit {
    
-  adminlogin: Adminlogin = new Adminlogin();
+  
   constructor() { }
 
   ngOnInit(): void {
   }
   loginAdmin(){
-    console.log(this.adminlogin);
+    
   }
 
 }
