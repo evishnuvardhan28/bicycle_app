@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiserviceService {
-  apiUrl=" https://2u3dv1fh4m.execute-api.us-east-1.amazonaws.com/dev/bicycles";
-  delUrl=" https://2u3dv1fh4m.execute-api.us-east-1.amazonaws.com/dev/bicycles";
-  deUrl="https://2u3dv1fh4m.execute-api.us-east-1.amazonaws.com/dev/booking";
-  bookUrl=" https://2u3dv1fh4m.execute-api.us-east-1.amazonaws.com/dev/booking";
-  baddUrl="https://2u3dv1fh4m.execute-api.us-east-1.amazonaws.com/dev/bicycles";
+  apiUrl=" https://8lj6j9k9ei.execute-api.us-east-1.amazonaws.com/dev/bicycles";
+  delUrl=" https://8lj6j9k9ei.execute-api.us-east-1.amazonaws.com/dev/bicycles";
+  deUrl="https://8lj6j9k9ei.execute-api.us-east-1.amazonaws.com/dev/booking";
+  bookUrl=" https://8lj6j9k9ei.execute-api.us-east-1.amazonaws.com/dev/booking";
+  baddUrl="https://8lj6j9k9ei.execute-api.us-east-1.amazonaws.com/dev/bicycles";
   constructor(private http:HttpClient) { }
   //Get all data
   getAllUser():Observable<any>{
